@@ -1,15 +1,12 @@
 import { siteConfig } from "@/config/site";
-import { absoluteUrl, cn } from "@/lib/utils";
-import { badgeVariants } from "@/components/ui/badge";
+import { absoluteUrl } from "@/lib/utils";
 import { Mdx } from "@/components/mdx-components";
 import { DocPager } from "@/components/pager";
 
 import "@/styles/mdx.css";
 
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { allDocs } from "contentlayer/generated";
 
 import { SiteFooter } from "@/components/site-footer";
