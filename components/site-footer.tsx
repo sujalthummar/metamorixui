@@ -13,7 +13,7 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="relative py-6 md:py-0">
+    <footer className="relative py-6 md:py-0 mt-16">
       <div
         className="absolute top-0 h-px w-full"
         style={{

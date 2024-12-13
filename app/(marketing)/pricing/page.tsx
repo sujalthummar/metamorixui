@@ -1,28 +1,25 @@
 import { Check } from "lucide-react";
 
+import SectionHeader from "@/components/section-header";
+
 const Pricing = () => {
   return (
     <section className="mx-auto my-10 max-w-7xl">
-      <div className="text-center text-sm font-semibold text-orange-600">
-        PRICING
-      </div>
-      <h1 className="my-5 text-center text-2xl font-semibold leading-tight">
-        Predictable pricing, designed to scale
-      </h1>
-      <p className="mx-auto max-w-lg text-center text-sm font-medium leading-4 text-gray-700 dark:text-gray-300">
-        Our pricing is designed to scale with your business. Our plans have no
-        hidden fees.
-      </p>
+      <SectionHeader
+        title="Simple, Affordable Plans for"
+        highlightedText="Everyone."
+        description="Our pricing is designed to scale with your business. Our plans have no
+        hidden fees."
+      />
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
         {plans.map((plan) => (
           <div
             key={plan.id}
-            className={`mx-auto mt-6 flex w-full flex-col rounded-xl p-4 shadow-sm ${
-              plan.id === "pro"
-                ? "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500 via-orange-500 to-amber-500 text-white"
-                : "border border-[#e4e4e7] dark:border-[#27272a]"
-            }`}
+            className={`mx-auto mt-6 flex w-full flex-col rounded-xl p-4 shadow-sm ${plan.id === "pro"
+              ? "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500 via-orange-500 to-amber-500 text-white"
+              : "border border-[#e4e4e7] dark:border-[#27272a]"
+              }`}
           >
             <div className="w-full space-y-4">
               <p className="text-lg font-semibold">{plan.name.toUpperCase()}</p>
@@ -81,7 +78,7 @@ const Pricing = () => {
 
 export default Pricing;
 
-const plans = [
+export const plans = [
   {
     name: "Free",
     id: "free",

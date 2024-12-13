@@ -46,15 +46,15 @@ const SiteHero = () => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-8 flex w-11/12 max-w-3xl flex-col items-center md:w-full"
+          className="mt-8 flex w-11/12 max-w-4xl flex-col items-center md:w-full"
         >
           <motion.h1
             initial={{ scale: 0.9, opacity: 0, filter: "blur(10px)" }}
             animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="lg:textxl bg-gradient-to-b from-gray-900 to-gray-700 bg-clip-text text-center text-4xl font-semibold text-transparent dark:from-gray-50 dark:to-gray-300 md:text-6xl md:!leading-snug"
+            className="text-xl bg-gradient-to-b from-gray-900 to-gray-700 bg-clip-text text-center font-semibold text-transparent dark:from-gray-50 dark:to-gray-300 md:text-6xl md:!leading-snug"
           >
-            Build your dream website in few minutes
+            Stunning Animated UI Blocks – Copy, Paste, Done.
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}
@@ -62,9 +62,8 @@ const SiteHero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-6 text-center text-base text-gray-700 dark:text-gray-300 md:text-lg"
           >
-            Trust me when I say this, Metamorix UI is the best way to build your
-            next website. It's fast, reliable, and easy to use. You can build
-            your dream website in minutes.
+            Add professional-grade animations to your project in seconds – no
+            complex coding required.
           </motion.p>
           <motion.div
             initial={{ y: 20, opacity: 0, filter: "blur(10px)" }}

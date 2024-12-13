@@ -2,22 +2,17 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 
+import SectionHeader from "../section-header";
+
 const SiteTestimonial = () => {
   return (
     <div className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
-      <div className="mx-auto max-w-4xl p-4 text-center sm:py-14">
-        <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-5xl">
-          Empowering Individuals
-          <br />
-          <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
-            and Businesses
-          </span>
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 md:text-xl">
-          Discover why over 150,000 users choose our platform to streamline
-          their workflow and enhance their digital presence.
-        </p>
-      </div>
+      <SectionHeader
+        title="Trusted by"
+        highlightedText="Developers and Designers"
+        description="Discover why over 4000+ devlopers choose our platform to streamline
+          their workflow and enhance their digital presence."
+      />
 
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (

@@ -3,6 +3,8 @@
 import React, { useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 
+import SectionHeader from "../section-header";
+
 interface AccordionItem {
   title: string;
   description: string;
@@ -18,20 +20,18 @@ interface AccordionProps {
 
 const accordionItems: AccordionItem[] = [
   {
+    title: "Can I customize the animations?",
+    description: "Yes, you can customize the animations using Framer Motion.",
+  },
+  {
+    title: "What frameworks are supported?",
+    description:
+      "Metamorix UI is compatible with any front-end framework like React, Vue, Angular, and more.",
+  },
+  {
     title: "Is Metamorix UI free to use?",
     description:
       "Yes, Metamorix UI is free to use for both personal and commercial projects. You can use it without any restrictions.",
-  },
-  {
-    title:
-      "What is the difference between Metamorix UI and other UI libraries?",
-    description:
-      "Metamorix UI is a modern UI blocks that are designed to help you build your next website faster. It is built with Tailwind CSS and Framer Motion.",
-  },
-  {
-    title: "Can I use Metamorix UI with other frameworks?",
-    description:
-      "Yes, you can use Metamorix UI with any front-end framework. It is designed to be compatible with any framework.",
   },
   {
     title: "Can i contribute to Metamorix UI?",
@@ -49,14 +49,11 @@ const SiteFaq: React.FC = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16">
-      <h1 className="mb-4 bg-gradient-to-b from-[#434343] to-[#494949] bg-clip-text text-center text-3xl font-bold text-[#F4FFFA00] dark:from-[#fafafa] dark:to-[#b4b4b4]">
-        Frequently asked questions
-      </h1>
-      <p className="mb-10 text-center text-gray-600 dark:text-gray-400">
-        Need help with something? Here are our most frequently asked questions.
-      </p>
-
+    <div className="mx-auto max-w-2xl">
+      <SectionHeader
+        title="Frequently asked questions"
+        description="Need help with something? Here are our most frequently asked questions."
+      />
       <div className="space-y-4">
         {accordionItems.map((item, i) => (
           <Accordion
